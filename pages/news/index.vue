@@ -20,7 +20,7 @@
 <script lang="ts" setup>
 import Http from '@/utils/request'
 useHead({
-    title: '新闻中心',
+    title: '新闻中心 | 广州库平信息技术有限公司',
     meta: [
         { name: 'description', content: '新闻中心' },
         { name: 'keywords', content: '新闻中心' }

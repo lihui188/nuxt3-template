@@ -36,7 +36,7 @@
 <script lang="ts" setup>
 import Http from '@/utils/request'
 useHead({
-    title: '产品介绍',
+    title: '产品介绍 | 广州库平信息技术有限公司',
     meta: [
         { name: 'description', content: '产品介绍' },
         { name: 'keywords', content: '产品介绍' }

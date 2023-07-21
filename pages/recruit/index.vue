@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import Http from '@/utils/request'
 useHead({
-    title: '人才招聘',
+    title: '人才招聘 | 广州库平信息技术有限公司',
     meta: [
         { name: 'description', content: '人才招聘' },
         { name: 'keywords', content: '人才招聘' }

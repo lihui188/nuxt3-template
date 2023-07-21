@@ -19,10 +19,10 @@
 <script lang="ts" setup>
 import Http from '@/utils/request'
 useHead({
-    title: '首页',
+    title: '详情信息 | 广州库平信息技术有限公司',
     meta: [
-        { name: 'description', content: 'snow-desc' },
-        { name: 'keywords', content: 'snow-kw' }
+        { name: 'description', content: '详细信息' },
+        { name: 'keywords', content: '详细信息' }
     ]
 })
 const route = useRoute()

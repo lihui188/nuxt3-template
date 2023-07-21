@@ -49,7 +49,7 @@
 <script lang="ts" setup>
 import Http from '@/utils/request'
 useHead({
-    title: '首页',
+    title: '首页 | 广州库平信息技术有限公司',
     meta: [
         { name: 'description', content: 'snow-desc' },
         { name: 'keywords', content: 'snow-kw' }

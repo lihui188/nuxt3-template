@@ -6,7 +6,8 @@
                     <img style="display: block;" v-for="item in advertsList" :src="covertHttp(item['img'])" />
                 </div>
                 <div class="content_head">
-                    <img class="logos" src="@/assets/images/home/logos.png" />
+                    <!-- <img class="logos" src="@/assets/images/home/logos.png" /> -->
+                    <img class="logos" src="@/assets/images/home/logo2.jpg" />
                     <div class="nav_menu">
                         <div :class="['nav_item', fullPath === '/' ? 'nav_active' : '']" @click="toHome">
                             首页
@@ -33,18 +34,19 @@
         <div class="layout_footer">
             <div class="footer_content">
                 <div class="foot_left">
-                    <div><span>关于我们</span><span class="margin-lr-10">|</span><span>权利申明</span></div>
-                    <div class="margin-tb-10">抗震支架网（www.kzzjw.com）由抗震支架行业协会主办、浙江步云信息技术有限公司承办.</div>
-                    <div class="margin-tb-10">全国统一客服热线：xxxxxxx</div>
+                    <!-- <div><span>关于我们</span><span class="margin-lr-10">|</span><span>权利申明</span></div> -->
+                    <div class="margin-tb-10">（www.kpitc.com）由广州库平信息技术有限公司承办.</div>
+                    <div><span style="cursor: pointer;" @click="toAboutUs">关于我们</span></div>
+                    <!-- <div class="margin-tb-10">全国统一客服热线：xxxxxxx</div> -->
                     <div class="margin-tb-10">公司电话：xxxxxx</div>
-                    <div class="margin-tb-10">联系地址：广州市天河区建中路36号露乐国际大厦405室</div>
+                    <div class="margin-tb-10">联系地址：广州市黄埔区科研路3号A5栋306房（仅限办公）</div>
                 </div>
                 <div class="foot_right">
                     <!-- <div class="margin-tb-10">抗震支架网（www.kzzjw.com）由抗震支架行业协会主办、浙江步云信息技术有限公司承办.　Copyright © 2018-2020　All Rights Reserved.</div> -->
                 </div>
             </div>
             <div class="footer_bottom">
-                ©2020 广州风雷益信息技术有限公司 <a class="toBeian" href="https://beian.miit.gov.cn/">粤ICP备2020101747号</a>
+                ©2023 广州库平信息技术有限公司 <a class="toBeian" href="https://beian.miit.gov.cn/">粤ICP备17030347号-1</a>
             </div>
         </div>
 
@@ -170,6 +172,7 @@ Http.get('/home/advertising/info').then((res: any) => {
 
 .home_header {
     img {
+        width:1200px;
         margin-bottom:5px;
     }
 }
@@ -185,8 +188,8 @@ Http.get('/home/advertising/info').then((res: any) => {
     justify-content: space-between;
 
     .logos {
-        // width:238px;
-        // height:35px;
+        width: auto;
+        height: 80px;
     }
 
     .nav_menu {

@@ -66,7 +66,7 @@
 import { Back } from '@element-plus/icons-vue'
 import Http from '@/utils/request'
 useHead({
-    title: '首页',
+    title: '产品详情 | 广州库平信息技术有限公司',
     meta: [
         { name: 'description', content: 'snow-desc' },
         { name: 'keywords', content: 'snow-kw' }

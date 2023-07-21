@@ -1,13 +1,13 @@
 <template>
     <client-only>
-        <!-- <div class="home_content">
+        <div class="home_content">
             <el-carousel :interval="5000" arrow="hover">
                 <el-carousel-item v-for="item in swiperList" :key="item">
-                    <img style="width:1200px;height:500px;" :src="covertHttp(item['img'])" />
+                    <img style="width:100%;height:auto;" :src="covertHttp(item['img'])" />
                 </el-carousel-item>
             </el-carousel>
-        </div> -->
-        <div class="hasProduct">
+        </div>
+        <!-- <div class="hasProduct">
             <div class="product_class">
                 <div class="product_title">类别</div>
                 <el-scrollbar max-height="360px">
@@ -50,7 +50,7 @@
                     </div>
                 </el-scrollbar>
             </div>
-        </div>
+        </div> -->
         <div class="container1">
             <div class="con_head">
                 <span>新闻中心</span>
@@ -145,6 +145,15 @@
                 </el-form>
             </div>
         </div>
+        <div class="container1">
+            <div class="con_head">
+                <span>友情链接</span>
+            </div>
+            <div>
+                <el-link :underline="false" v-for="item in linkList" :key="item['id']" :href="item['link']"
+                    target="_blank">{{ item['name'] }}</el-link>
+            </div>
+        </div>
     </client-only>
 </template>
 <script lang="ts" setup>
@@ -152,7 +161,7 @@ import Http from '@/utils/request'
 import { ElMessage } from 'element-plus'
 import type { FormInstance, FormRules } from 'element-plus'
 useHead({
-    title: '首页',
+    title: '首页 | 广州库平信息技术有限公司',
     meta: [
         { name: 'description', content: 'snow-desc' },
         { name: 'keywords', content: 'snow-kw' }
@@ -269,7 +278,7 @@ const handleOut = () => {
     selectCateId.value = ''
     selectCateName.value = ''
 }
-// 
+// 选择匪类
 const selectCateId = ref('')
 const selectCateName = ref('')
 const cateProList = ref([])
@@ -281,6 +290,12 @@ const changeCate = (item: any) => {
         cateProList.value = res.data.slice(0, 10)
     })
 }
+// 选择分类
+const linkList = ref([])
+Http.get('/home/link/info').then((res: any) => {
+    let data = res.data
+    linkList.value = data
+})
 
 </script>
   
@@ -374,6 +389,7 @@ const changeCate = (item: any) => {
             // justify-content: space-between;
 
             .con_item {
+                z-index: 2;
                 cursor: pointer;
                 width: 260px;
                 margin: 10px 5px;
@@ -425,8 +441,6 @@ const changeCate = (item: any) => {
                 }
             }
         }
-
-
     }
 }
 
@@ -590,6 +604,16 @@ const changeCate = (item: any) => {
             }
         }
     }
+}
+
+.link_url {
+    color: $baseColor;
+    margin: 20px;
+}
+
+.el-link {
+    margin-top: 8px;
+    margin-right: 8px;
 }
 </style>
   
